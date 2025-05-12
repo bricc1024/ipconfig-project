@@ -1,0 +1,9 @@
+# Node and Angular build output
+**/node_modules/
+**/dist/
+
+# System/IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
