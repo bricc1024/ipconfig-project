@@ -1,18 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  standalone: true,
   selector: 'app-pi-estimator',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './pi-estimator.component.html',
 })
-export class PiEstimatorComponent {
+export class PiEstimatorComponent implements OnInit {
   estimate: number = 0;
   error: number = 0;
 
-  constructor() {
+  ngOnInit(): void {
     this.calculatePi();
   }
 
